@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<head>
+
+<style>
+/*
+    div {
+        position: relative;
+        background-color: rgb(134, 107, 107);
+        width: 500px;
+        height: 500px;
+        top: 20%;
+        left: 50%;
+        
+    }
+*/
+
+    /*set html dimensions to fit the avaiable page size*/
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*set body relative to positioning the children 
+    elements in its propoer positions*/
+    body {
+        position: relative;
+        width: 99%;
+        height: 97%;
+        }
+    /*
+    body {
+        
+        width: 700px;
+        margin: 0;
+        height: 600px;
+        top: 100px;
+        left:50px;
+        margin: 10px;
+        border-style: solid;
+        border-color: black;
+    }
+    */
+    a {
+        color: grey;
+        text-decoration: none;
+    }
+
+    .header-settings {
+        display: grid;
+        grid-template-columns: 6.5% 6.5% 57.5% 6.5% 6.5% 6.5% 6.5%;
+        font-size: 15px;
+        margin: 0px 0px 0px 0px;
+        width: 99%;
+        height: 40px;
+        align-items: center;
+        
+        }
+
+    .footer-settings {
+        display: grid;
+        position: absolute;
+        z-index: 2;
+        grid-template-columns: 6.5% 6.5% 6.5% 57.5% 6.5% 6.5% 6.5%;
+        font-size: 12px;
+        margin: 0px 0px 0px 0px;
+        width: 99%;
+        height: 40px;
+        bottom: 0px;
+        background-color: rgba(252, 243, 243, 0.973); 
+        align-items: center;
+        }
+
+/*
+    .link1 {
+        background: red;
+    }
+
+    .link2 {
+        background: green;
+    }
+
+    .link3 {
+        background: lightgray;
+    }
+
+    .link4 {
+        background: lightgoldenrodyellow;
+    }
+
+    .link5 {
+        background:lightgreen;
+
+    }
+
+    .link6 {
+        background: lightcoral;
+    }
+
+    .link7 {
+        background: lightskyblue;
+    }
+*/
+
+    .link-sets {
+
+    }
+
+    #google-logo {
+        
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+    }
+    /* Absolute positioning is relative to its parent element, 
+    while relative positioning is relative to itself */
+
+    /*An element with positio: absolute is removed from
+    the normal document flow. It is positioned automatically
+    to the starting point (top-left corner) of its parent 
+    element.*/
+    .form-position {
+        position: absolute;
+        z-index: 1;
+        /*background-color: grey;*/
+        width: 620px;
+        height: 170px;
+        top: 40%;
+        left: 50%;
+        /*background-color: grey;*/
+        /*To center the center of the form position
+        with respect of its parent element
+        just center the top left corner of the element
+        using top and left atributes, then use the transform:
+        translate(X_axis,Y_axis) to translade the block 
+        element 50% percent up to the top and to the left
+        by half of its current dimensions*/
+        transform: translate(-50%, -40%);
+    }
+    
+    form {
+        /*to center the input element we need to set the 
+        text-align in the parent element. */
+        text-align: center;
+        margin-top: 20px;
+        
+        /*
+        border-style: none;
+        border-width: 0px;
+        border-radius: 40px;
+        */
+    }
+
+    #search-buttons {
+        display: inline-block;
+        width: 500px;
+        /*background: grey;*/
+        text-align: center;
+        
+    }
+
+    #google-search {
+        margin-right: 20px;
+    }
+
+    #feel-lucky {
+        margin-left: 20px;
+    }
+    
+    #search-bar {
+        /*when you press on an input field some browsers 
+        will add a blue outline around the input. Use the outline:
+        none to remove that outline*/
+        outline: none;
+        width: 550px;
+        margin: 8px;
+        padding-left: 20px;
+        padding-right: 10px;
+        height: 2.5em;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 20px;
+        border-color: lightgray;
+    }
+
+</style>
+
+</head>
+<body>
+    <header class="header-settings">
+        <div class="link-sets">
+            <a href="#">About</a>
+        </div>
+        <div class="link-sets">
+            <a href="#">Store</a>
+        </div>
+        <div></div>
+        <div class="link-sets">
+            <a href="#">Gmail</a>
+        </div>
+        <div class="link-sets">
+            <a href="#">Images</a>
+        </div>
+        <div class="link-sets">
+            <a href="#">Icons</a>
+        </div>
+        <div class="link-sets">
+            <a href="#">Sign in</a>
+        </div>
+    </header>
+
+    <div class="form-position">
+        <img id="google-logo" src="images/googlelogo_color_272x92dp.png" alt="Google logo" >
+        <form>
+            <input id="search-bar" type="text">
+            <div id="search-buttons"> 
+                <button id="google-search" type="submit">Google Search</button>
+                <button id="feel-lucky">I'm Feeling Lucky</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer-settings">
+        <div>
+            <a href="#">Advertising</a>
+        </div>
+        <div>
+            <a href="#">Business</a>
+        </div>
+        <div>
+            <a href="#">How Search works</a>
+        </div>
+        <div>
+            <a href="#"></a>
+        </div>
+        <div>
+            <a href="#">Privacy</a>
+        </div>
+        <div>
+            <a href="#">Terms</a>
+        </div>
+        <div>
+            <a href="#">Settings</a>
+        </div>
+        
+    </footer>
+     
+</body>
